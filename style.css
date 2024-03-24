@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background: #82E0AA;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding:20px 0;
+    background-color:#229954;
+}
+.container{
+    display: flex;
+    gap:35px;
+    padding: 35px;
+}
+.weather-input{
+    width: 600px;  
+}
+.weather-input input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    padding: 0 15px;
+    margin: 10px 0 20px 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.separator{
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    background:#808B96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.separator::before{
+    content: "Yoki";
+    color: #5499C7;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    background:#82E0AA;
+    
+}
+.location-btn{
+    background:#95A5A6;
+}
+.weather-data{
+    width: 100%;
+}
+button{
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    outline: none;
+    border:none;
+    color:#17202A;
+    font-size: 1rem;
+    border-radius: 5px;
+    background:#1ABC9C;
+}
+.current-weather{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border-radius:5px;
+    padding: 20px 70px 20px 20px;
+    background:#1ABC9C;
+}
+.current-weather h2{
+    font-size: 2rem;
+}
+.current-weather h4{
+    margin-top:15px;
+    font-size: 1.2rem;
+    font-size: 500;
+}
+.icon{
+    text-align: center;
+}
+.icon img{
+    max-width: 120px;
+    margin-top: -20px;
+}
+.icon h3{
+    text-transform: capitalize;
+}
+.days-forecast h2{
+    font-size: 2rem;
+    margin: 40px 0;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    font-weight: bold;
+
+}
+.weather-cards{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+}
+.card{
+    list-style: none;
+    color:#17202A ;
+    padding: 20px 15px;
+    border-radius:5px;
+    background:#1ABC9C;
+    width: 30%;
+    
+}
+.card h4{
+    margin-top: 5px;
+}
+.card img{
+    max-width: 70px;
+}
+/* --------Resposive-cards-------- */
+
+@media screen and (max-width:1400px) {
+    .current-weather{
+        padding: 25px;
+    }
+    .weather-cards{
+        flex-wrap: wrap;
+    }
+    .card{
+        width: calc(100% / 4 -15px);
+        
+    }
+} 
+@media screen and (max-width:1200px) {
+    .card{
+        width: calc(100% / 3 -15px);
+        padding: 5px;
+    }
+}
+@media screen and (max-width:950px) {
+    .weather-input {
+        width: 450px;
+    }
+    .weather-cards{
+        padding: 25px;
+    }
+    .card{
+        width: calc(100% / 2 -15px);
+        
+    }
+}
+@media screen and (max-width:750px) {
+    .container{
+        flex-wrap: wrap;
+    }
+    .weather-input{
+        width: 100%;
+    }
+}
